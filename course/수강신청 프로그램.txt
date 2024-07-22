@@ -1,0 +1,35 @@
+create table student(
+sno number(10) NOT NULL Primary Key,
+sname varchar2(10));
+
+insert into student values('202201001','지효');
+insert into student values('202201002','나연');
+insert into student values('202301001','정연');
+insert into student values('202301002','모모');
+insert into student values('202401001','사나');
+insert into student values('202401002','미나');
+-----------------------------------------------------
+create table course(
+cno number(5) NOT NULL Primary Key,
+cname varchar2(20),
+status number(1));
+
+insert into course values('101','국어','1');
+insert into course values('102','영어','1');
+insert into course values('103','수학','1');
+insert into course values('104','전산','1');
+insert into course values('105','노어','0');
+-----------------------------------------------------
+create table regist(
+sno number(10) NOT NULL,
+cno number(5) NOT NULL,
+Primary Key(sno, cno));
+
+insert into regist values('202201001','101');
+insert into regist values('202201001','102');
+insert into regist values('202201002','103');
+insert into regist values('202201002','104');
+insert into regist values('202301001','101');
+insert into regist values('202301001','102');
+insert into regist values('202301002','103');
+insert into regist values('202301002','104');
